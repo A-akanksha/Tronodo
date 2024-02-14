@@ -9,22 +9,61 @@
 <body>
     <nav class="nav-bar">
         <ul >
-            <li class="Nav"><img src="./images/logo.png" alt="logo" id="logo">Spotify</li>
+            <li class="Nav"><img src="./images/logo.png" alt="logo" id="logo">Tronodo</li>
             <li>Home</li>
             <li>About</li>
         </ul>
     </nav>
     <div class="container">
-
+        <div class="songList">
+            <h1>Best of My Favourites</h1>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img src="./images/do_gallan.jpg" alt="ist song">
+                    <span class="songName">Do Gallan</span>
+                    <span class="songItemPlay"><span class="timestamp">4:35</span> <i id="0"  class="fa-solid songItemPlay fa-play"></i></span>
+                </div>
+                <div class="songItem">
+                    <img src="./images/let.jpg" alt="ist song">
+                    <span class="songName">Let em play</span>
+                    <span class="songItemPlay"><span class="timestamp">4:35</span> <i id="1" class="fa-solid songItemPlay fa-play"></i></span>
+                </div>
+                <div class="songItem">
+                    <img src="./images/challa.jpg" alt="ist song">
+                    <span class="songName">Challa</span>
+                    <span class="songItemPlay"><span class="timestamp">3:27</span> <i id="2" class="fa-solid songItemPlay fa-play"></i></span>
+                </div>
+                <div class="songItem">
+                    <img src="./images/diary.jpg" alt="ist song">
+                    <span class="songName">Diary</span>
+                    <span class="songItemPlay"><span class="timestamp">4:12</span> <i id="3" class="fa-solid songItemPlay fa-play"></i></span>
+                </div>
+                <div class="songItem">
+                    <img src="./images/dangal.jpg" alt="ist song">
+                    <span class="songName">Dangal</span>
+                    <span class="songItemPlay"><span class="timestamp">4:35</span> <i id="4" class="fa-solid songItemPlay fa-play"></i></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="songBanner"></div>
+        <!-- <div class="gif">
+            <img src="https://www.animatedimages.org/data/media/102/animated-music-image-0216.gif" alt="gif">
+        </div> -->
     </div>
     <div class="bottom">
-        <input type="range" name="range" id="progressBar" min="0" max="100">
+        <input type="range" name="range" id="progressBar" min="0" max="100" value="0">
         <div class="icons">
-            <i class="fa-solid fa-backward"></i>
-            <i class="fa-solid fa-play"></i>
-            <i class="fa-solid fa-forward"></i>
+            <i id="back" class="fa-2x fa-solid fa-backward"></i>
+            <i class="fa-2x fa-solid fa-play" id="mplay"></i>
+            <i id="next"  class="fa-2x fa-solid fa-forward"></i>
+        </div>
+        <div class="B_gif">
+            <img id="B_gif" src="https://www.animatedimages.org/data/media/102/animated-music-image-0172.gif" alt="gif">
+            <span id="m_song"></span>
         </div>
     </div>
     <script src="https://kit.fontawesome.com/c94189940d.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </body>
 </html>
