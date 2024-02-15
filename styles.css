@@ -40,11 +40,21 @@ nav ul{
     color: white;
     font-family: 'varela round',sans-serif;
     display: flex;
+    justify-content: space-between;
     width: 75%;
     margin: 20px auto;
     border-radius: 15px;
     padding: 20px;
     background-image: url(./images/background_img.jpg);
+}
+.gif{
+    margin:100px;
+    margin-left: 30px;
+}
+#bc_img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
 }
 .bottom{
     position: sticky;

@@ -1,9 +1,11 @@
 let song_i=0;
-let audioElement= new Audio("./sounds/challa.mp3");
+let audioElement= new Audio("./sounds/do_gallan.mp3");
 let mplay=document.getElementById('mplay') ;
 let myProg_bar=document.getElementById('progressBar');
 let gif=document.getElementById('B_gif');
 let m_song=document.getElementById('m_song');
+let bc_img=document.getElementById('bc_img');
+
 
 let songItems=Array.from(document.getElementsByClassName('songItem'));
 let songs=[
@@ -13,6 +15,8 @@ let songs=[
     {songName:"Diary",filePath:"./sounds/diary.mp3",cover:"./images/diary.jpg"},
     {songName:"Dangal",filePath:"./sounds/dangal.mp3",cover:"./images/dangal.jpg"},
 ]
+
+console.log(bc_img.src);
 m_song.innerText=songs[0].songName;
 songItems.forEach((element,i)=>{
     element.getElementsByTagName('img')[0].src=songs[i].cover;
@@ -53,6 +57,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
     element.addEventListener('click',(e)=>{
         makeAllPlays();
         song_i=parseInt(e.target.id);
+        bc_img.src=songs[song_i].cover;
         e.target.classList.remove('fa-play');
         e.target.classList.add('fa-pause');
         audioElement.src="./sounds/"+songSound[song_i]+".mp3";
@@ -72,6 +77,7 @@ document.getElementById('next').addEventListener('click',()=>{
     else{
         song_i+=1;
     }
+    bc_img.src=songs[song_i].cover;
     audioElement.src="./sounds/"+songSound[song_i]+".mp3";
         
         audioElement.currentTime=0;
@@ -88,6 +94,7 @@ document.getElementById('back').addEventListener('click',()=>{
     else{
         song_i-=1;
     }
+    bc_img.src=songs[song_i].cover;
     audioElement.src="./sounds/"+songSound[song_i]+".mp3";
         audioElement.currentTime=0;
         audioElement.play();
